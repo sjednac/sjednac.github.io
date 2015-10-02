@@ -1,4 +1,4 @@
-# Personal Blog 
+# Mint Beans
 
-My website based on the **[Minimal Mistakes](http://mmistakes.github.io/minimal-mistakes)** template.
+A [Jekyll](https://jekyllrb.com/) blog based on the **[Minimal Mistakes](http://mmistakes.github.io/minimal-mistakes)** template.
 
