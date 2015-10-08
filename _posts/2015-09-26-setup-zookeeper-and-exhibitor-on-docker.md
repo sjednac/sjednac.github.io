@@ -3,11 +3,13 @@ layout: post
 title: Setting up ZooKeeper and Exhibitor in a Docker environment
 excerpt: "A step-by-step guide for setting up a ZooKeeper ensemble in a Docker environment, using Exhibitor for supervision."
 tags: [zookeeper, exhibitor, docker, microservices, devops]
-modified: 2015-10-02
+modified: 2015-10-08
 comments: true
 ---
 
 Integrating [ZooKeeper](https://zookeeper.apache.org) into a [Docker](https://www.docker.com/) environment can get tricky, if you consider clustering support and use [Exhibitor](https://github.com/Netflix/exhibitor) for supervision. In this post, I'm documenting my own process with this stack, a customized **Netflix** image and a single [boot2docker](https://github.com/boot2docker/boot2docker) virtual machine as the hosting environment.
+
+**Update**: The process gets significantly easier, when using `docker-machine` for virtual host management. Check it out [here](https://docs.docker.com/machine/).
 
 ## Running a single ZooKeeper instance
 
