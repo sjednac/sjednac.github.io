@@ -3,7 +3,7 @@ layout: post
 title: Load testing ZeroMQ with a custom DSL for Gatling
 excerpt: "Instructions for implementing a custom DSL for non-http load testing on top of the Gatling framework."
 tags: [gatling, scala, dsl, load testing, zeromq, akka, akka-stream]
-modified: 2016-03-13
+modified: 2016-03-15
 comments: true
 ---
 
