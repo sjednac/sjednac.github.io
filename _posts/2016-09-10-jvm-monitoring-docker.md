@@ -3,7 +3,7 @@ layout: post
 title: Monitoring JVM apps in a Docker environment
 excerpt: "Visualizing container metrics using JMX, StatsD, Graphite and Grafana."
 tags: [docker, jvm, jmx, monitoring, statsd, graphite, grafana]
-modified: 2016-09-12
+modified: 2016-09-10
 comments: true
 ---
 
