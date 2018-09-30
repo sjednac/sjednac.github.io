@@ -3,9 +3,13 @@ layout: post
 title: "Adapting H2 for in-memory integration tests with SQL Server compatibility"
 excerpt: "Improving performance, reliability and determinism of SQL Server integration tests by replacing the database engine with a custom H2 build."
 tags: [h2, sql server, integration tests, database, testing, legacy]
-modified: 2015-10-04
+modified: 2018-09-30
 comments: true
 ---
+
+**UPDATE:** All features described in this article are currently [included](https://github.com/h2database/h2database/issues/1338) in the official release of the **H2** database.
+
+----
 
 Slow and non-deterministic tests can become a real issue, when dealing with large, monolithic applications and pre-existing code, that depends on a centralized data model (i.e. a shared database with some "test" data). One common improvement is to use an in-memory database instead, and run each test suite in it's own, isolated environment with no external dependencies.
 
@@ -21,7 +25,7 @@ The main drawback is the compatibility factor of course, since some issues may b
 
 Having this in mind, most in-memory databases work pretty well with various **JPA** implementations, such as **Hibernate**. It only becomes a challenge when you start working with native queries and/or legacy code, that implement some "custom" persistence solutions.
 
-To solve these problems in one of my projects, I've extended the [H2](http://www.h2database.com) database with some **SQL Server** syntax support. You can find the source code [here](https://github.com/sbilinski/h2database) and a brief summary of the features below.
+To solve these problems in one of my projects, I've extended the [H2](http://www.h2database.com) database with some **SQL Server** syntax support. You can find the source code [here](https://github.com/sbilinski/h2database/tree/sqlserver-compat) and a brief summary of the features below.
 
 Usage should be rather straightforward - just include a `MODE=MSSQLServer` in the JDBC connection string, when instantiating a `DataSource`:
 
