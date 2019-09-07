@@ -3,7 +3,7 @@ layout: post
 title: "Syncing SSH config with AWS"
 excerpt: "My take on accessing EC2 instances in an ever-changing server environment."
 tags: [ssh, amazon, aws, ec2, cloud, infrastructure, devops, automation]
-modified: 2016-09-17
+modified: 2019-09-07
 comments: true
 ---
 
