@@ -57,7 +57,7 @@ Note that this feature is completely **optional**.
 
 The general idea is to run a **single command** with different params (i.e. potentially multiple times) to get all your infrastructure state in one place. You can setup a `cron` job for it or have a handy alias on the CLI, that you can execute at any point when you need it. 
 
-In my case, I use the latter approach, and put something like this in my shell's profile:
+In my case, I use the latter approach, and put something like this in my shell's profile (a VPN connection for each environment is implied in this case):
 
 ```bash
 # Slightly rude wrapper for AWS SSH Sync
@@ -68,7 +68,6 @@ function ass() {
     for PROFILE in "${PROFILES[@]}"; do
         aws_ssh_sync --profile $PROFILE \
                      --region "${REGIONS[@]}" \
-                     --address "public_private" \
                      --config-key $PROFILE \
                      --output-file "$HOME/.ssh/config" \
                      --name-prefix $PROFILE \
