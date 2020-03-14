@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Szymon Biliński
+title: Szymon Jednac
 tags: [about, bio]
 modified: 2019-04-12T19:00:00+0200
 comments: false
@@ -18,4 +18,4 @@ For the past few years I've been in various **tech lead** roles, including sever
 
 My day-to-day work involves a mix of **application development**, **operations** and **organisational** activities. In all those aspects of work, I believe that a synergy of soft and technical skills is essential for any project's success.
 
-To find out more about my projects and my skills, check out my [LinkedIn](https://www.linkedin.com/in/szymonbilinski) profile and my open source contributions on [GitHub](https://github.com/sbilinski).
+To find out more about my projects and my skills, check out my [LinkedIn](https://www.linkedin.com/in/sjednac) profile and my open source contributions on [GitHub](https://github.com/sjednac).

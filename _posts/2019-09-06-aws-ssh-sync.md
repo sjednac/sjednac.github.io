@@ -13,7 +13,7 @@ This is pretty great, as it allows us to spawn a complete new environment in a r
 
 That being said, the best way to debug "hard" problems is - still - a direct connection using [SSH](https://www.freebsd.org/doc/handbook/openssh.html) to a problematic node (at least in my book). The thing is, that while the environment structure is well-defined, the target IP may be long out of date (servers can come and go) and - on top of it - connection params may vary across the environment itself. For example, you may want to use different credentials, setup a dedicated [bastion host](https://aws.amazon.com/quickstart/architecture/linux-bastion/) or do something SSH-specific for a **subset** of instances in general.
 
-I usually end up with a lot of shell scripts around such setup, so I decided to unify the approach with a small [Python script](https://github.com/sbilinski/aws-ssh-sync) instead.
+I usually end up with a lot of shell scripts around such setup, so I decided to unify the approach with a small [Python script](https://github.com/sjednac/aws-ssh-sync) instead.
 
 ![](https://imgs.xkcd.com/comics/automation.png){: .center-image }
 
@@ -86,6 +86,6 @@ After executing `ass`, all outputs will be written to `$HOME/.ssh/config`, givin
 
 ## Conclusion 
 
-The script currently supports a limited subset of `ssh_config(5)` params, that I use on a daily basis. If you're missing something - please feel free to open a [pull request](https://github.com/sbilinski/aws-ssh-sync/blob/master/CONTRIBUTING.md). 
+The script currently supports a limited subset of `ssh_config(5)` params, that I use on a daily basis. If you're missing something - please feel free to open a [pull request](https://github.com/sjednac/aws-ssh-sync/blob/master/CONTRIBUTING.md). 
 
-The project can be found on [GitHub](https://github.com/sbilinski/aws-ssh-sync).
+The project can be found on [GitHub](https://github.com/sjednac/aws-ssh-sync).

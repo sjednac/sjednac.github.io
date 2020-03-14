@@ -7,7 +7,7 @@ modified: 2016-03-15
 comments: true
 ---
 
-I've been working on a [pet project](https://github.com/sbilinski/reactive-zeromq) of my own lately, which is an [Akka Streams](http://doc.akka.io/docs/akka/current/scala.html) wrapper for [ZeroMQ](http://zeromq.org/) sockets. In order to test the library and the target application itself, I wanted to build some **load tests**, which could determine how well they performed under an arbitrary pressure.
+I've been working on a [pet project](https://github.com/sjednac/reactive-zeromq) of my own lately, which is an [Akka Streams](http://doc.akka.io/docs/akka/current/scala.html) wrapper for [ZeroMQ](http://zeromq.org/) sockets. In order to test the library and the target application itself, I wanted to build some **load tests**, which could determine how well they performed under an arbitrary pressure.
 
 There are several ways one could approach this, but if you want to stick to an existing framework and work on a *Scala* project, than [Gatling](http://gatling.io/) is probably a good choice. The framework provides an elegant [DSL](http://gatling.io/#/cheat-sheet/2.1.7) and can be integrated with an *sbt* project using the official [plugin](http://gatling.io/docs/2.1.7/extensions/sbt_plugin.html). You can find a brief summary of the core features on the project's [home page](http://gatling.io/#/why) and in [this](https://www.thoughtworks.com/insights/blog/gatling-take-your-performance-tests-next-level) blog post by *ThoughtWorks*.
 
@@ -266,4 +266,4 @@ The most important part are the `statsEngine` calls, which are responsible for s
 
 I hope you enjoyed the article and didn't get discouraged by `implicit` conversions and longish code examples.
 
-You can find a complete version of the **DSL** in the [reactive-zeromq](https://github.com/sbilinski/reactive-zeromq) project on **GitHub**. Please take it with a grain of salt - it's a small experiment of mine, not a full blown communication library.
+You can find a complete version of the **DSL** in the [reactive-zeromq](https://github.com/sjednac/reactive-zeromq) project on **GitHub**. Please take it with a grain of salt - it's a small experiment of mine, not a full blown communication library.

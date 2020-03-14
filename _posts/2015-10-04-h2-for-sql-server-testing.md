@@ -25,7 +25,7 @@ The main drawback is the compatibility factor of course, since some issues may b
 
 Having this in mind, most in-memory databases work pretty well with various **JPA** implementations, such as **Hibernate**. It only becomes a challenge when you start working with native queries and/or legacy code, that implement some "custom" persistence solutions.
 
-To solve these problems in one of my projects, I've extended the [H2](http://www.h2database.com) database with some **SQL Server** syntax support. You can find the source code [here](https://github.com/sbilinski/h2database/tree/sqlserver-compat) and a brief summary of the features below.
+To solve these problems in one of my projects, I've extended the [H2](http://www.h2database.com) database with some **SQL Server** syntax support. You can find the source code [here](https://github.com/sjednac/h2database/tree/sqlserver-compat) and a brief summary of the features below.
 
 Usage should be rather straightforward - just include a `MODE=MSSQLServer` in the JDBC connection string, when instantiating a `DataSource`:
 

@@ -19,7 +19,7 @@ which will contain the [StatsD](https://github.com/etsy/statsd) server along wit
 
 Relevant `docker-compose` configuration:
 
-{% gist sbilinski/24809966114a6b5089c2ada53eb0b4b7 docker-compose.yml %}
+{% gist sjednac/24809966114a6b5089c2ada53eb0b4b7 docker-compose.yml %}
 
 ## JVM application
 
@@ -27,7 +27,7 @@ Application under observation needs to enable a **JMX endpoint** on the process 
 reflected in the startup arguments, which are passed to the `java` command in
 application's `Dockerfile`:
 
-{% gist sbilinski/24809966114a6b5089c2ada53eb0b4b7 Dockerfile-jvmapp %}
+{% gist sjednac/24809966114a6b5089c2ada53eb0b4b7 Dockerfile-jvmapp %}
 
 Please note, that this setup assumes **no security** on the JMX interface itself.
 You should provide some kind of **firewall** when replicating this type of environment
@@ -39,7 +39,7 @@ are set on the Java process you should be good to go.
 
 For simplicity, our example will generate some noise, but do nothing apart from it:
 
-{% gist sbilinski/24809966114a6b5089c2ada53eb0b4b7 BusyApp.java %}
+{% gist sjednac/24809966114a6b5089c2ada53eb0b4b7 BusyApp.java %}
 
 You can **test connectivity** using [jvisualvm](http://docs.oracle.com/javase/6/docs/technotes/tools/share/jvisualvm.html)
 by replacing the host name value in `JMX_HOST` with `docker-machine ip` output, and
@@ -50,13 +50,13 @@ by replacing the host name value in `JMX_HOST` with `docker-machine ip` output, 
 Application container will be queried by a `jmxtrans` container, which is defined in a
 separate `Dockerfile`:
 
-{% gist sbilinski/24809966114a6b5089c2ada53eb0b4b7 Dockerfile-jmxtrans %}
+{% gist sjednac/24809966114a6b5089c2ada53eb0b4b7 Dockerfile-jmxtrans %}
 
 All configuration, including metric and endpoint definitions will be set at
 runtime in the service script. This allows us to rely on **environment variables**
 as shown below:
 
-{% gist sbilinski/24809966114a6b5089c2ada53eb0b4b7 run-jmxtrans.sh %}
+{% gist sjednac/24809966114a6b5089c2ada53eb0b4b7 run-jmxtrans.sh %}
 
 ## Grafana dashboards
 
@@ -82,5 +82,5 @@ Don't forget to add an **aggregation function** at the far end of your metric st
 ## Conclusions
 
 I hope this minimal example will help you to get started with JVM monitoring in a
-Docker environment. You can find the complete source code [here](https://gist.github.com/sbilinski/24809966114a6b5089c2ada53eb0b4b7), if you
+Docker environment. You can find the complete source code [here](https://gist.github.com/sjednac/24809966114a6b5089c2ada53eb0b4b7), if you
 would like to experiment with it yourself.

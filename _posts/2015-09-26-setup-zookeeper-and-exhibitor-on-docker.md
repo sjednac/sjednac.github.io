@@ -168,9 +168,9 @@ Keep in mind, that the initial startup may take some time. If you're impatient o
 
 You can use the following **Scala** template to check: connectivity, replication, node failures and possibly other cases, that may require a standalone client.
 
-{% gist sbilinski/86687b735f29bda4cf81 %}
+{% gist sjednac/86687b735f29bda4cf81 %}
 
-Just clone the [repository](https://gist.github.com/sbilinski/86687b735f29bda4cf81) and launch `sbt ~run` in the root directory of the project.
+Just clone the [repository](https://gist.github.com/sjednac/86687b735f29bda4cf81) and launch `sbt ~run` in the root directory of the project.
 
 Please note, that if a `znode` is created using the `EPHEMERAL` mode, then it will be available for the active session only. You may want to change this, depending on your test case requirements. Check [Curator](http://curator.apache.org/) and [ZooKeeper](https://zookeeper.apache.org/doc/trunk/zookeeperOver.html) docs for more information regarding ephemeral nodes and the client implementation itself.
 
