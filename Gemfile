@@ -5,3 +5,5 @@ gem 'jekyll-sitemap'
 gem 'jekyll-gist'
 gem 'rouge'
 gem 'octopress', '~> 3.0.0.rc.12'
+
+gem "webrick", "~> 1.9"
